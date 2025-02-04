@@ -34,6 +34,10 @@ class EncoderDecoderManager {
     // Handle input change
     this.handleInputChange();
 
+    // handle button change
+    this.handleEncodeButton();
+    this.handleDecodeButton();
+
     // copy output
     this.copyOutput();
 
