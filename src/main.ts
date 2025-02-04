@@ -33,7 +33,13 @@ class EncoderDecoderManager {
   }
 
   handleInputChange() {
-    this.inputElement.addEventListener("input", () => {});
+    this.inputElement.addEventListener("input", () => {
+      // Text value of textarea input element.
+      const inputValue = this.inputElement.value;
+
+      // Reflecting the encoded url in output
+      this.outputElement.value = this.encodeURL(inputValue);
+    });
   }
 
   encodeURL(url: string) {
