@@ -119,18 +119,17 @@
             </p>
             <ol>
               <li class="py-2.5 text-base lg:text-lg text-gray-800">
-                1. Certain characters have special meanings in URLs
-                (e.g.,
+                1. Certain characters have special meanings in URLs (e.g.,
                 <code>:</code>, <code>/</code>, <code>?</code>, <code>#</code>,
                 <code>&</code>, <code>=</code>, etc.). These are called reserved
                 characters and must be encoded if they are used for purposes
                 other than their special meaning.
               </li>
               <li class="py-2.5 text-base lg:text-lg text-gray-800">
-                2. Some characters are unsafe to include in a URL because
-                they can be misinterpreted or cause issues during transmission
-                (e.g., <code>spaces</code>, <code>&lt;</code>,
-                <code>&gt;</code>, <code>"</code>, etc.).
+                2. Some characters are unsafe to include in a URL because they
+                can be misinterpreted or cause issues during transmission (e.g.,
+                <code>spaces</code>, <code>&lt;</code>, <code>&gt;</code>,
+                <code>"</code>, etc.).
               </li>
               <li class="py-2.5 text-base lg:text-lg text-gray-800">
                 3. Characters outside the ASCII set (e.g., accented letters,
@@ -138,8 +137,6 @@
               </li>
             </ol>
           </div>
-        </div>
-        <div class="flex flex-col gap-4 lg:gap-8">
           <div class="w-full h-max">
             <h1 class="font-bold text-xl lg:text-2xl text-gray-900">
               What is URL Encoding?
@@ -171,6 +168,81 @@
                 <code class="mx-0.5 bg-slate-100">%C3%A9</code>.
               </li>
             </ul>
+          </div>
+        </div>
+        <div class="flex flex-col gap-4 lg:gap-8">
+          <div class="w-full h-max">
+            <h1 class="font-bold text-xl lg:text-2xl text-gray-900">
+              Common ASCII characters and their URL encoded value
+            </h1>
+            <div class="w-full my-4">
+              <table
+                class="w-full text-sm text-left rtl:text-right text-gray-500"
+              >
+                <thead class="text-xs text-gray-700 uppercase">
+                  <tr>
+                    <th scope="col" class="px-6 py-3 bg-gray-50">Character</th>
+                    <th scope="col" class="px-6 py-3 bg-gray-100">
+                      URL Encoding (UTF-8)
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="border-b border-gray-200">
+                    <th
+                      scope="row"
+                      class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap bg-gray-50"
+                    >
+                      space
+                    </th>
+                    <td
+                      class="px-6 py-4 bg-gray-100 text-gray-900 whitespace-nowrap"
+                    >
+                      <code>%20</code>
+                    </td>
+                  </tr>
+                  <tr class="border-b border-gray-200">
+                    <th
+                      scope="row"
+                      class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap bg-gray-50"
+                    >
+                      "
+                    </th>
+                    <td
+                      class="px-6 py-4 bg-gray-100 text-gray-900 whitespace-nowrap"
+                    >
+                      <code>%22</code>
+                    </td>
+                  </tr>
+                  <tr class="border-b border-gray-200">
+                    <th
+                      scope="row"
+                      class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap bg-gray-50"
+                    >
+                      %
+                    </th>
+                    <td
+                      class="px-6 py-4 bg-gray-100 text-gray-900 whitespace-nowrap"
+                    >
+                      <code>%25</code>
+                    </td>
+                  </tr>
+                  <tr class="border-gray-200">
+                    <th
+                      scope="row"
+                      class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap bg-gray-50"
+                    >
+                      &
+                    </th>
+                    <td
+                      class="px-6 py-4 bg-gray-100 text-gray-900 whitespace-nowrap"
+                    >
+                      <code>%26</code>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
           </div>
         </div>
       </section>
