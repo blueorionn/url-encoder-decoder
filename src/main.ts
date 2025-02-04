@@ -31,6 +31,10 @@ class EncoderDecoderManager {
       "textarea#clear-button"
     ) as HTMLButtonElement;
   }
+
+  handleInputChange() {
+    this.inputElement.addEventListener("input", () => {});
+  }
 }
 
 // Initializing encoder-decoder manager
