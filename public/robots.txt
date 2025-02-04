@@ -1,2 +1,2 @@
-# https://url-encoder-decoder-two.vercel.app/
+# https://url-encode-decode.vercel.app/
 User-agent: *
