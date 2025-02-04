@@ -83,7 +83,9 @@
           </div>
         </section>
       </section>
-      <section class="max-w-7xl mx-auto px-8 py-8 lg:py-16 xl:py-20">
+      <section
+        class="max-w-7xl mx-auto px-8 py-8 lg:py-16 xl:py-20 grid grid-flow-row lg:grid-flow-col gap-4"
+      >
         <div class="w-full">
           <h1 class="font-bold text-xl lg:text-2xl text-gray-900">
             About URL Encoder
@@ -94,7 +96,19 @@
             automatically convert your string to URL-encoded format in
             real-time. Once the URL is encoded, you can click the copy button to
             copy the encoded URL. To clear the input text area and output text
-            area click the clear button.
+            area click the clear button. Note that, our tool uses
+            <code>UTF-8</code> encoding scheme for encoding URLs.
+          </p>
+        </div>
+        <div class="w-full">
+          <h1 class="font-bold text-xl lg:text-2xl text-gray-900">
+            What is URL Encoding?
+          </h1>
+          <p class="py-2.5 text-base lg:text-lg text-gray-800">
+            URL encoding (also known as percent-encoding) is a way to convert
+            special characters in a URL into a format that can be safely
+            transmitted over the internet. It ensures that reserved and unsafe
+            characters do not interfere with the structure of a URL.
           </p>
         </div>
       </section>
