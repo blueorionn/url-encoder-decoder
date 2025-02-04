@@ -51,6 +51,16 @@ class EncoderDecoderManager {
     });
   }
 
+  handleEncodeButton() {
+    this.EncodeButton.addEventListener("click", () => {
+      // Text value of textarea input element.
+      const inputValue = this.inputElement.value;
+
+      // Reflecting the encoded url in output
+      this.outputElement.value = this.encodeURL(inputValue);
+    });
+  }
+
   encodeURL(url: string) {
     return encodeURIComponent(url);
   }
