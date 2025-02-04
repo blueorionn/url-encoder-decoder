@@ -34,6 +34,9 @@ class EncoderDecoderManager {
     // Handle input change
     this.handleInputChange();
 
+    // copy output
+    this.copyOutput();
+
     // clear output
     this.clearOutput();
   }
@@ -62,7 +65,20 @@ class EncoderDecoderManager {
       this.inputElement.value = "";
     });
   }
+
+  copyOutput() {
+    this.CopyButton.addEventListener("click", () => {
+      copyToClipboard(this.outputElement.value);
+    });
+  }
 }
 
 // Initializing encoder-decoder manager
 const encoderDecoderManager = new EncoderDecoderManager();
+
+function copyToClipboard(text: string) {
+  navigator.clipboard
+    .writeText(text)
+    .then(() => {})
+    .catch(() => alert("Copy failed!"));
+}
