@@ -19,17 +19,23 @@ class EncoderDecoderManager {
 
     // Button Elements
     this.EncodeButton = document.querySelector(
-      "textarea#encode-button"
+      "button#encode-button"
     ) as HTMLButtonElement;
     this.DecodeButton = document.querySelector(
-      "textarea#decode-button"
+      "button#decode-button"
     ) as HTMLButtonElement;
     this.CopyButton = document.querySelector(
-      "textarea#copy-button"
+      "button#copy-button"
     ) as HTMLButtonElement;
     this.ClearButton = document.querySelector(
-      "textarea#clear-button"
+      "button#clear-button"
     ) as HTMLButtonElement;
+
+    // Handle input change
+    this.handleInputChange();
+
+    // clear output
+    this.clearOutput();
   }
 
   handleInputChange() {
@@ -48,6 +54,13 @@ class EncoderDecoderManager {
 
   decodeURL(url: string) {
     return decodeURIComponent(url);
+  }
+
+  clearOutput() {
+    this.ClearButton.addEventListener("click", () => {
+      this.outputElement.value = "";
+      this.inputElement.value = "";
+    });
   }
 }
 
