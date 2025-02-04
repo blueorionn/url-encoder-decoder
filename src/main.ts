@@ -98,7 +98,7 @@ class EncoderDecoderManager {
 }
 
 // Initializing encoder-decoder manager
-const encoderDecoderManager = new EncoderDecoderManager();
+new EncoderDecoderManager();
 
 function copyToClipboard(text: string) {
   navigator.clipboard
