@@ -35,6 +35,14 @@ class EncoderDecoderManager {
   handleInputChange() {
     this.inputElement.addEventListener("input", () => {});
   }
+
+  encodeURL(url: string) {
+    return encodeURIComponent(url);
+  }
+
+  decodeURL(url: string) {
+    return decodeURIComponent(url);
+  }
 }
 
 // Initializing encoder-decoder manager
