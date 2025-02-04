@@ -33,7 +33,7 @@
           URL Encoder/Decoder
         </h1>
       </section>
-      <section class="max-w-7xl mx-auto p-4 lg:p-16">
+      <section class="max-w-7xl w-full mx-auto p-4 lg:p-16">
         <div class="my-4 lg:my-8 w-full flex gap-4">
           <button
             type="button"
@@ -88,32 +88,90 @@
         </section>
       </section>
       <section
-        class="max-w-7xl mx-auto px-8 py-8 lg:py-16 xl:py-20 grid grid-flow-row lg:grid-flow-col gap-4"
+        class="max-w-7xl w-full mx-auto px-4 py-8 lg:py-16 xl:py-20 grid grid-flow-row lg:grid-flow-col gap-4 lg:gap-8"
       >
-        <div class="w-full">
-          <h1 class="font-bold text-xl lg:text-2xl text-gray-900">
-            About URL Encoder
-          </h1>
-          <p class="py-2.5 text-base lg:text-lg text-gray-800">
-            This is a simple web application to encode and decode URLs. You need
-            to type or paste a string in the input text area, the tool will
-            automatically convert your string to URL-encoded format in
-            real-time. Once the URL is encoded, you can click the copy button to
-            copy the encoded URL. To clear the input text area and output text
-            area click the clear button. Note that, our tool uses
-            <code>UTF-8</code> encoding scheme for encoding URLs.
-          </p>
+        <div class="flex flex-col gap-4 lg:gap-8">
+          <div class="w-full h-max">
+            <h1 class="font-bold text-xl lg:text-2xl text-gray-900">
+              About URL Encoder
+            </h1>
+            <p class="py-2.5 text-base lg:text-lg text-gray-800">
+              This is a simple web application to encode and decode URLs. You
+              need to type or paste a string in the input text area, the tool
+              will automatically convert your string to URL-encoded format in
+              real-time. Once the URL is encoded, you can click the copy button
+              to copy the encoded URL. To clear the input text area and output
+              text area click the clear button. Note that, our tool uses
+              <code class="p-0.5 rounded bg-slate-200">UTF-8</code> encoding
+              scheme for encoding URLs.
+            </p>
+          </div>
+          <div class="w-full h-max">
+            <h1 class="font-bold text-xl lg:text-2xl text-gray-900">
+              Why is URL Encoding Needed?
+            </h1>
+            <p class="py-2.5 text-base lg:text-lg text-gray-800">
+              URL encoding is necessary because URLs can only contain a limited
+              set of characters. If a URL includes special characters that are
+              not allowed or have reserved meanings, they must be encoded to
+              ensure the URL is safe, valid, and properly interpreted by web
+              browsers and servers.
+            </p>
+            <ol>
+              <li class="py-2.5 text-base lg:text-lg text-gray-800">
+                1. Certain characters have special meanings in URLs
+                (e.g.,
+                <code>:</code>, <code>/</code>, <code>?</code>, <code>#</code>,
+                <code>&</code>, <code>=</code>, etc.). These are called reserved
+                characters and must be encoded if they are used for purposes
+                other than their special meaning.
+              </li>
+              <li class="py-2.5 text-base lg:text-lg text-gray-800">
+                2. Some characters are unsafe to include in a URL because
+                they can be misinterpreted or cause issues during transmission
+                (e.g., <code>spaces</code>, <code>&lt;</code>,
+                <code>&gt;</code>, <code>"</code>, etc.).
+              </li>
+              <li class="py-2.5 text-base lg:text-lg text-gray-800">
+                3. Characters outside the ASCII set (e.g., accented letters,
+                Chinese characters, etc.) must be encoded.
+              </li>
+            </ol>
+          </div>
         </div>
-        <div class="w-full">
-          <h1 class="font-bold text-xl lg:text-2xl text-gray-900">
-            What is URL Encoding?
-          </h1>
-          <p class="py-2.5 text-base lg:text-lg text-gray-800">
-            URL encoding (also known as percent-encoding) is a way to convert
-            special characters in a URL into a format that can be safely
-            transmitted over the internet. It ensures that reserved and unsafe
-            characters do not interfere with the structure of a URL.
-          </p>
+        <div class="flex flex-col gap-4 lg:gap-8">
+          <div class="w-full h-max">
+            <h1 class="font-bold text-xl lg:text-2xl text-gray-900">
+              What is URL Encoding?
+            </h1>
+            <p class="py-2.5 text-base lg:text-lg text-gray-800">
+              URL encoding (also known as percent-encoding) is a way to convert
+              special characters in a URL into a format that can be safely
+              transmitted over the internet. It ensures that reserved and unsafe
+              characters do not interfere with the structure of a URL.
+            </p>
+            <h2 class="font-bold text-lg lg:text-xl text-gray-800">
+              Encoding Process:
+            </h2>
+            <p class="py-2.5 text-base lg:text-lg text-gray-800">
+              Each character to be encoded is replaced by a
+              <code>%</code> followed by its two-digit hexadecimal value.
+            </p>
+            <ul class="mx-4 my-2.5 lg:my-4 list-disc">
+              <li class="text-base lg:text-lg text-gray-800">
+                A space character (<code class="mx-0.5 bg-slate-100"></code>) is
+                encoded as <code class="mx-0.5 bg-slate-100">%20</code>.
+              </li>
+              <li class="text-base lg:text-lg text-gray-800">
+                The exclamation mark (!) is encoded as
+                <code class="mx-0.5 bg-slate-100">%21</code>.
+              </li>
+              <li class="text-base lg:text-lg text-gray-800">
+                The letter é (in UTF-8) is encoded as
+                <code class="mx-0.5 bg-slate-100">%C3%A9</code>.
+              </li>
+            </ul>
+          </div>
         </div>
       </section>
     </main>
